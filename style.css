@@ -208,5 +208,9 @@ footer a:hover {
     }
     #hero .hero-text {
         width: 90%;
+        margin-top:70px;
+    }
+    .social-icons {
+    gap: 10px;;
     }
 }
