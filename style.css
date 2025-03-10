@@ -1,0 +1,212 @@
+/* Define CSS Variables for colors */
+:root {
+    --primary-color: #1e90ff; /* Blue */
+    --secondary-color: #ff6347; /* Tomato */
+    --background-color: #f9f9f9; /* Light background */
+    --text-color: #333; /* Dark text color */
+    --hover-color: rgba(0, 0, 0, 0.7); /* Darker hover effect */
+    --footer-background: #333;
+    --footer-text-color: white;
+    --hero-text-bg-color: rgba(0, 0, 0, 0.5); /* Hero text background */
+    --hero-hover-bg-color: rgba(0, 0, 0, 0.8); /* Hero text hover background */
+}
+
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h2 {
+    font-weight: bold;
+    color: var(--text-color);
+}
+/* Hero Section */
+#hero {
+    color: white;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Profile Image Container (Above Hero Text) */
+.profile-img-container {
+    position: absolute;
+    top: 30%;  /* Adjusted to place the image above the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;  /* Adjust the size of your profile image */
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white; /* Optional: Add border around your profile picture */
+    overflow: hidden;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Hero Text Container */
+#hero .hero-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for text */
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 55%;  /* Position the text below the profile image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Hover effect for the hero text */
+#hero:hover .hero-text {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Text Shadow Effect */
+#hero h1, #hero p {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Scale only the text on hover */
+#hero h1:hover, #hero p:hover {
+    transform: scale(1.1); /* Slight zoom effect on text when hovered */
+}
+
+
+/* About Me and CV */
+section {
+    padding: 40px 0;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for divs */
+}
+
+section:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+#about, #Courses {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Cards */
+.card {
+    margin-bottom: 25PX;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Buttons and Links */
+.btn {
+    margin: 5px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Contact Me Section */
+#contact {
+    background-color: #f9f9f9; /* Light background for the contact section */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* Social Media Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between icons */
+}
+
+.social-icons a {
+    display: inline-block;
+    font-size: 30px; /* Size of icons */
+    color: white;
+    background-color: #333; /* Dark background for the icon */
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Social Media Icons */
+.social-icons a:hover {
+    background-color: var(--primary-color); /* Change background color on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Icon Specific Styling (Optional) */
+.social-icons a .fab, .social-icons a .fas {
+    font-size: 1.5rem; /* Resize icons */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero {
+        height: 50vh;
+    }
+    #hero .hero-text {
+        width: 90%;
+    }
+}
