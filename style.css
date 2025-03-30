@@ -108,6 +108,21 @@ section:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
 /* Project Cards */
 .card {
     margin-bottom: 25PX;
@@ -213,4 +228,6 @@ footer a:hover {
     .social-icons {
     gap: 10px;;
     }
+
+
 }
