@@ -1,170 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Nawaf AlMawri | Full Stack Desktop Developer & Software Engineer</title>
-            <link rel="icon" type="image/PNG" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg==" alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish">
-            <link rel="icon" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg==" alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish" />
-            <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg==" alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abood | Full Stack Desktop Developer & Software Engineer</title>
+    <link
+      rel="icon"
+      type="image/PNG"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg=="
+      alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish"
+    />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg=="
+      alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR4nGNgYGBgsDMzc3SzMjvhY2t+18fG4r6PjfkDewvzuQzEAGNjY0kfW4v7Be5W/2E41dnqr7u1xTVHS7NYggY4WJoXp7tYgjVmulr/T3K3+58PNcjD2uIaQQOcrSwnR7vb/08L8/3fX57xf+/ctv8VKZH/Y72c/7vYWH0kaECEn+e0TVMbft/ZMvP/870L4HjbjObfZWkxzwga4O/jFjyxOvclsmYQvrRu8p/YEN8TBA0AgQh/71UPdsz5v7S78v/pFf3/t01v+t9VlvnEwsJCmoEY4Gpvr1OVHf/owPzO/4s6yv8fXtj1JzLAZyMDKcDD2c402MftcW582Gt/T5fVHh4e7CAXmJubG+PCcBcGOtoUZno6nUj29/wwrTLrd7KH490oF7vdCSkp9+esWPkFF46Oj7/FEOhgU748MeDL7dLY/6fzo/6vTgn+D2JfK475X1Vc+PnKs+f/z967///Ilav/l2/Z+v/AhYv/Lzx6/B8knpmff4Yhx9vlHEgDNtyYlQJWWFBe/v/o1Wv/69rawAaU1tSAxaPj47cylPm73MNlQGdy1P8zd+/9X7pp0//NBw/9b+3r+792124wBrkoMDS0jaHMz/U+LgNWpob+X7dr91+QbSB86clTMA3CC9eu+25nZ2fLUObv+gCb5pulsf8zIsP+55WUfCqpa3iPjjOLi1/7h4ScZghzstsLcgU27Ofm+jWntPRRTlnZfWQ8YcGicxVt7ddDI6NXAAAzb6a6LgraSQAAAABJRU5ErkJggg=="
+      alt="external-male-coding-and-development-soft-fill-soft-fill-juicy-fish"
+    />
 
-        <meta name="description" content="Nawaf AlMawri is a Full Stack Desktop Developer and Software Engineering student specialized in C#, C++, and SQL Server. View his projects, download CV, and connect.">
-        <meta name="keywords" content="Nawaf AlMawri, Software Engineer, Desktop Developer, C#, C++, SQL Server, Full Stack Developer, CV, Portfolio">
-        <meta name="author" content="Nawaf AlMawri">
-    
-        
-        <link rel="canonical" href="https://your-website.com">
-    
-        <meta property="og:title" content="Nawaf AlMawri | Full Stack Desktop Developer & Software Engineer">
-        <meta property="og:description" content="Check out Nawaf's software projects, download his CV, and get in touch.">
-        <!-- <meta property="og:image" content="your-photo.jpg"> -->
-        <meta property="og:image" content="https://nmtcode.github.io/Nawaf_AlMawri/your-photo.jpg" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+    <meta
+      name="description"
+      content="Nawaf AlMawri is a Full Stack Desktop Developer and Software Engineering student specialized in C#, C++, and SQL Server. View his projects, download CV, and connect."
+    />
+    <meta
+      name="keywords"
+      content="Nawaf AlMawri, Software Engineer, Desktop Developer, C#, C++, SQL Server, Full Stack Developer, CV, Portfolio"
+    />
+    <meta name="author" content="Nawaf AlMawri" />
 
-        
-        
-        <meta property="og:type" content="website">
-    
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Nawaf AlMawri | Full Stack Desktop Developer & Software Engineer" />
-        <meta name="twitter:description" content="Software projects, CV download, and more." />
-        <meta name="twitter:image" content="your-photo.jpg" />
+    <link rel="canonical" href="https://your-website.com" />
 
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Nawaf AlMawri",
-          "jobTitle": "Software Engineer",
-          "url": "https://your-website.com",
-          "sameAs": [
-            "https://github.com/nmtcode",
-            "https://www.linkedin.com/in/nawaf-al-mawri-259887188/",
-            "https://t.me/nmtcode"
-          ]
-        }
-        </script>
-    
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet" />
-    </head>
-    <body>
+    <meta
+      property="og:title"
+      content="Nawaf AlMawri | Full Stack Desktop Developer & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Check out Nawaf's software projects, download his CV, and get in touch."
+    />
+    <!-- <meta property="og:image" content="your-photo.jpg"> -->
+    <meta
+      property="og:image"
+      content="https://nmtcode.github.io/Nawaf_AlMawri/your-photo.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-        <header id="hero">
-            <div class="hero-image">
-                <div class="profile-img-container">
-                    <img src="your-photo.jpg" alt="Nawaf AlMawri" class="profile-img">
-                </div>
-                <div class="hero-text">
-                    <h1>Hello, I am Nawaf AlMawri</h1>
-                    <p>Full Stack Desktop Developer</p>
-                </div>
-            </div>
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Nawaf AlMawri | Full Stack Desktop Developer & Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Software projects, CV download, and more."
+    />
+    <meta name="twitter:image" content="your-photo.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nawaf AlMawri",
+        "jobTitle": "Software Engineer",
+        "url": "https://your-website.com",
+        "sameAs": [
+          "https://github.com/nmtcode",
+          "https://www.linkedin.com/in/nawaf-al-mawri-259887188/",
+          "https://t.me/nmtcode"
+        ]
+      }
+    </script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="hero">
+      <div class="hero-image">
+        <div class="profile-img-container">
+          <img src="your-photo.jpg" alt="Nawaf AlMawri" class="profile-img" />
+        </div>
+        <div class="hero-text">
+          <h1>Hello, I am Nawaf AlMawri</h1>
+          <p>Full Stack Desktop Developer</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="container mt-5 text-left">
+      <header>
+        <h2>About Me</h2>
+      </header>
+      <article>
+        <p>
+          I am <strong>Nawaf Al-Mawri</strong>, 21 years old, a Software
+          Engineering student and desktop developer specializing in
+          <strong>C#</strong>, <strong>C++</strong>, and
+          <strong>SQL Server</strong>. I have experience developing complete
+          solutions, including
+          <strong>Driver and Vehicle License Department System</strong> and
+          <strong>University Library System</strong>.
+        </p>
+        <p>
+          My focus is on creating efficient and robust systems using best
+          practices to meet user needs and improve performance.
+        </p>
+      </article>
+
+      <section aria-labelledby="my-projects">
+        <h3 id="my-projects">My Projects</h3>
+        <ul class="list-unstyled">
+          <li>
+            ✅ <strong>Driver and Vehicle Licensing Department System</strong> –
+            Designed to automate and manage licensing data efficiently.
+          </li>
+          <li>
+            ✅ <strong>University Library Department System</strong> – Developed
+            to facilitate book archiving and streamline the borrowing process.
+          </li>
+        </ul>
+        <a href="Nawaf_AlMawri_CV.pdf" download class="download-btn"
+          >📥 Download CV</a
+        >
+      </section>
+    </section>
+
+    <main>
+      <section id="projects" class="container mt-5">
+        <header>
+          <h2>My Projects</h2>
         </header>
-    
-        <section id="about" class="container mt-5 text-left">
-            <header>
-                <h2>About Me</h2>
-            </header>
-            <article>
-                <p>I am <strong>Nawaf Al-Mawri</strong>, 21 years old, a Software Engineering student and desktop developer specializing in <strong>C#</strong>, <strong>C++</strong>, and <strong>SQL Server</strong>. I have experience developing complete solutions, including <strong>Driver and Vehicle License Department System</strong> and <strong>University Library System</strong>.</p>
-                <p>My focus is on creating efficient and robust systems using best practices to meet user needs and improve performance.</p>
-            </article>
-    
-            <section aria-labelledby="my-projects">
-                <h3 id="my-projects">My Projects</h3>
-                <ul class="list-unstyled">
-                    <li>✅ <strong>Driver and Vehicle Licensing Department System</strong> – Designed to automate and manage licensing data efficiently.</li>
-                    <li>✅ <strong>University Library Department System</strong> – Developed to facilitate book archiving and streamline the borrowing process.</li>
-                </ul>
-                <a href="Nawaf_AlMawri_CV.pdf" download class="download-btn">📥 Download CV</a>
-            </section>
-        </section>
-    
-        <main>
-            <section id="projects" class="container mt-5">
-                <header>
-                    <h2>My Projects</h2>
-                </header>
-                <div class="row">
-                    <article class="col-md-6">
-                        <div class="card">
-                            <img src="project1.jpg" class="card-img-top" alt="Driver Vehicle License Department Project Screenshot">
-                            <div class="card-body">
-                                <h3 class="card-title">Driver Vehicle License Department</h3>
-                                <p class="card-text">DVLD is a comprehensive system that issues both local and international licenses ... license suspension and release.</p>
-                                <a href="DVLD.html" class="btn btn-primary">See More</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-md-6">
-                        <div class="card">
-                            <img src="ULS/الرئيسية.png" class="card-img-top" alt="University Library System Project Screenshot">
-                            <div class="card-body">
-                                <h3 class="card-title">University Library System</h3>
-                                <p class="card-text">Includes management of books, students, borrowing records ... and seamless management of library resources.</p>
-                                <a href="ULS.html" class="btn btn-primary">See More</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </main>
-    
-        <section id="Courses" class="container mt-5">
-            <header>
-                <h2>Courses</h2>
-            </header>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>Database Level2 - Concepts & T-SQL </strong> Advanced Topics in Databases, Programming, and Advanced Querying Using T-SQL</li>
-            <li class="list-group-item"><strong>C# Programming Level 2 </strong> Study advanced topics in the language</li>
-            <li class="list-group-item"><strong>Full Real Project </strong> A real-world project consisting of interfaces linked to databases</li>
-            <li class="list-group-item"><strong>C# & Database Connectivity </strong> Connecting interfaces to databases</li>
-            <li class="list-group-item"><strong>Database - SQL ( Projects & Practice) </strong> Database Applications and Practices</li>
-            <li class="list-group-item"><strong>OOP As It Should Be In C# </strong>Object Oriented Programming in C#</li>
-            <li class="list-group-item"><strong>Database Level 1 - SQL (Concepts and Practice) </strong>Database Basics</li>
-            <li class="list-group-item"><strong>C# - Level 1 </strong>C# Basics</li>
-            <li class="list-group-item"><strong>Algorithms & Problem Solving Level 5 </strong></li>
-            <li class="list-group-item"><strong>Data Structures - Level 1 </strong></li>
-            <li class="list-group-item"><strong>OOP as it Should Be (Applications) </strong></li>
-            <li class="list-group-item"><strong>OOP as it Should Be (Concepts) </strong></li>
-            <li class="list-group-item"><strong>Algorithms & Problem Solving Level 4 </strong></li>
-            <li class="list-group-item"><strong>Algorithms & Problem Solving Level 3 </strong></li>
-            <li class="list-group-item"><strong>Introduction to Programming Using C++ Level 2 </strong></li>
-            <li class="list-group-item"><strong>Algorithms & Problem Solving Level 2 </strong></li>
-            <li class="list-group-item"><strong>Algorithms & Problem-Solving Level 1 Solutions </strong></li>
-            <li class="list-group-item"><strong>Programming Using C++ - Level 1 </strong></li>
-            <li class="list-group-item"><strong>Algorithms & Problem Solving Level 1 </strong></li>
-            <li class="list-group-item"><strong>Programming Foundations - Level 1 </strong></li>
-            <li class="list-group-item"><strong>Intermediate Diploma in Engilsh</strong></li>
-            
-            </ul>
-        </section>
-    
-        <section id="contact" class="text-center py-5">
-            <header>
-                <h2>Contact Me</h2>
-            </header>
-            <p>If you would like to get in touch, feel free to reach out to me through the links below.</p>
-            <nav class="social-icons" aria-label="Social Media Links">
-                <a href="https://github.com/nmtcode" class="btn btn-dark" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:nawaf92004@gmail.com" class="btn btn-dark" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/nawaf-al-mawri-259887188/" class="btn btn-dark" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/+967735045280" class="btn btn-dark" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://t.me/nmtcode" class="btn btn-dark" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-            </nav>
-        </section>
-    
-        <footer class="bg-dark text-white text-center py-3 mt-5">
-            <div class="container">
-                <p>&copy; 2025 <strong>Nawaf AlMawri</strong> | All Rights Reserved</p>
+        <div class="row">
+          <article class="col-md-6">
+            <div class="card">
+              <img
+                src="project1.jpg"
+                class="card-img-top"
+                alt="Driver Vehicle License Department Project Screenshot"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Driver Vehicle License Department</h3>
+                <p class="card-text">
+                  DVLD is a comprehensive system that issues both local and
+                  international licenses ... license suspension and release.
+                </p>
+                <a href="DVLD.html" class="btn btn-primary">See More</a>
+              </div>
             </div>
-        </footer>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    
+          </article>
+          <article class="col-md-6">
+            <div class="card">
+              <img
+                src="ULS/الرئيسية.png"
+                class="card-img-top"
+                alt="University Library System Project Screenshot"
+              />
+              <div class="card-body">
+                <h3 class="card-title">University Library System</h3>
+                <p class="card-text">
+                  Includes management of books, students, borrowing records ...
+                  and seamless management of library resources.
+                </p>
+                <a href="ULS.html" class="btn btn-primary">See More</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section id="Courses" class="container mt-5">
+      <header>
+        <h2>Courses</h2>
+      </header>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Database Level2 - Concepts & T-SQL </strong> Advanced Topics
+          in Databases, Programming, and Advanced Querying Using T-SQL
+        </li>
+        <li class="list-group-item">
+          <strong>C# Programming Level 2 </strong> Study advanced topics in the
+          language
+        </li>
+        <li class="list-group-item">
+          <strong>Full Real Project </strong> A real-world project consisting of
+          interfaces linked to databases
+        </li>
+        <li class="list-group-item">
+          <strong>C# & Database Connectivity </strong> Connecting interfaces to
+          databases
+        </li>
+        <li class="list-group-item">
+          <strong>Database - SQL ( Projects & Practice) </strong> Database
+          Applications and Practices
+        </li>
+        <li class="list-group-item">
+          <strong>OOP As It Should Be In C# </strong>Object Oriented Programming
+          in C#
+        </li>
+        <li class="list-group-item">
+          <strong>Database Level 1 - SQL (Concepts and Practice) </strong
+          >Database Basics
+        </li>
+        <li class="list-group-item"><strong>C# - Level 1 </strong>C# Basics</li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem Solving Level 5 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Data Structures - Level 1 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>OOP as it Should Be (Applications) </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>OOP as it Should Be (Concepts) </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem Solving Level 4 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem Solving Level 3 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Introduction to Programming Using C++ Level 2 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem Solving Level 2 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem-Solving Level 1 Solutions </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Programming Using C++ - Level 1 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Algorithms & Problem Solving Level 1 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Programming Foundations - Level 1 </strong>
+        </li>
+        <li class="list-group-item">
+          <strong>Intermediate Diploma in Engilsh</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="text-center py-5">
+      <header>
+        <h2>Contact Me</h2>
+      </header>
+      <p>
+        If you would like to get in touch, feel free to reach out to me through
+        the links below.
+      </p>
+      <nav class="social-icons" aria-label="Social Media Links">
+        <a
+          href="https://github.com/nmtcode"
+          class="btn btn-dark"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="mailto:nawaf92004@gmail.com"
+          class="btn btn-dark"
+          aria-label="Email"
+          ><i class="fas fa-envelope"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/nawaf-al-mawri-259887188/"
+          class="btn btn-dark"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://wa.me/+967735045280"
+          class="btn btn-dark"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a
+          href="https://t.me/nmtcode"
+          class="btn btn-dark"
+          target="_blank"
+          aria-label="Telegram"
+          ><i class="fab fa-telegram"></i
+        ></a>
+      </nav>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <div class="container">
+        <p>&copy; 2025 <strong>Nawaf AlMawri</strong> | All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
