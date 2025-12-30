@@ -1,18 +1,15 @@
-name: Windows Auto Deploy
+name: Production Auto Deploy
 
-# متى يعمل هذا الملف؟ عند عمل Push على فرع main
 on:
   push:
     branches:
       - main
 
 jobs:
-  build:
-    # إخبار جيثاب أن يستخدم الـ Runner الذي ثبته أنت
+  deploy:
     runs-on: self-hosted
-
     steps:
-      - name: Go to project folder and Pull
+      - name: Update Code on Server
         run: |
-          cd "C:\xampp\htdocs\MyCVProject"
+          cd "C:\xampp\htdocs"
           git pull origin main
